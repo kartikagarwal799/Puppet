@@ -1,6 +1,12 @@
-node node1 {
+node 'default' {
 
-	include java::install
+notify {"****** NODE1 *******":
+ 
+ 
+ message    => "this is going to install java"
 
+}
+	include tomcat::install
+    include tomcat::service
 
 }
